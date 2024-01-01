@@ -47,6 +47,10 @@ Make sure you have the following installed on your system:
     npm start
     ```
 
+### Join Testing Channel 🛠️
+
+To test the bot, join the testing channel on [Discord](https://discord.com/channels/1190933006328811550/).
+
 ## Bot Commands 🤖
 
 ### Shorten URL
@@ -76,7 +80,7 @@ Deploying this project requires the following steps:
 1. Clone the URL Shortener Server repository:
 
     ```bash
-    git clone https://github.com/coderRaj07/discordBot_urlshortner.git
+    git clone https://github.com/coderRaj07/URLshortner_server.git
     ```
 
 2. Navigate to the server project directory and follow the server deployment instructions in its README.
