@@ -1,18 +1,41 @@
 const { REST, Routes } = require('discord.js');
+const dotenv = require("dotenv");
+dotenv.config();
 
 const commands = [{
-    name: "ping",
-    description: "Replies with Pong!"
+	name: "ping",
+	description: "Replies with Pong!"
 },
 {
-    
-}]
+	name: "short",
+	description: 'Shortens the provided URL',
+	options: [
+		{
+			name: 'url',
+			type: 3,
+			description: 'The URL to shorten',
+			required: true,
+		},
+	],
+},
+{
+	name: "timeboundshort",
+	description: 'Shortens the provided URL with a 30-minute expiration',
+	options: [
+		{
+			name: 'url',
+			type: 3,
+			description: 'The URL to shorten',
+			required: true,
+		},
+	],
+},]
 
 // https://discord.com/channels/guildId/
 
-const clientId = "1190934229333327925"; // from developer portal OAuth2 "https://discord.com/developers/applications/" 
-const guildId = "1190933006328811550"; // serverId
-const rest = new REST().setToken("MTE5MDkzNDIyOTMzMzMyNzkyNQ.GEslv4.8Va0u4bsqs1hG_NJj7M2-NgOTfpFFS9_Hwq4Rc");
+const clientId = process.env.clientId; 	// from developer portal OAuth2 "https://discord.com/developers/applications/" 
+const guildId = process.env.guildId; 	// serverId
+const rest = new REST().setToken(process.env.token);
 
 (async () => {
 	try {
