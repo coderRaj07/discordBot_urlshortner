@@ -90,4 +90,6 @@ async function shortenUrlWithExpiration(url) {
     return `https://rich-pink-dhole-cuff.cyclic.app/${shortId}`;
 }
 
-client.login(process.env.token)
+// client.login(process.env.token)
+
+module.exports = client;
